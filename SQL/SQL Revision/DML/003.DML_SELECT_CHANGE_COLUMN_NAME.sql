@@ -1,0 +1,1 @@
+SELECT os  AS 'operating_system',model,battery_capacity AS 'battery_capacity(mAh)' FROM csvtu.smartphones;
