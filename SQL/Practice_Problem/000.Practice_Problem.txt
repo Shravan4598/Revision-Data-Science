@@ -1,0 +1,63 @@
+Q.01: Find the average battery capacity and the average primary rear camera resolution for all smartphones with a price greater than or equal to 100000
+
+Q.02: Find the average internal memory capacity of smartphones that have a refresh rate of 120 Hz or higher and a front-facing camera resolution greater than or equal to 20 megapixels.
+
+Q.03: Find the number of smartphones with 5G capability.
+
+Sorting Data
+
+Q.04: find top 5 samsung phones with biggest screen size
+
+Q.05: sort all the phone with in decending order of number of total cameras
+
+Q.06: sort data on the basis of ppi in decreasing order
+
+Q.07: find the phone with 2nd largest battery
+
+Q.08: find the name and rating of the worst rated apple phone
+
+Q.09: sort phones alphabetically and then on the basic of rating in desc order
+
+Q.10: sort phones alphabetically and then on the basic of price in asc order
+
+Grouping Data
+
+Q.11: Group smartphones by brand and get the count, average price, max rating, avg screen size and avg battery capacity
+
+Q.12: Group smartphones by whether they have an NFC and get the average price and rating
+
+Q.13: Group smartphones by the extended memory available and get the average price
+
+Q.14: Group smartphones by the brand and processor brand and get the count of models and the average primary camera resolution (rear)
+
+Q.15: find top 5 most costly phone brands
+
+Q.16: which brand makes the smallest screen smartphones
+
+Q.17: Avg price of 5g phones vs avg price of non 5g phones
+
+Q.18: Group smartphones by the brand, and find the brand with the highest number of models that have both NFC and an IR blaster
+
+Q.19: Find all samsung 5g enabled smartphones and find out the avg price for NFC and Non-NFC phones
+
+Q.20: find the phone name, price of the costliest phone
+
+Having clause
+
+Q.21: find the avg rating of smartphone brands which have more than 20 phones
+
+Q.22: Find the top 3 brands with the highest avg ram that have a refresh rate of at least 90 Hz and fast charging available and dont consider brands which have less than 10 phones
+
+Q.23: find the avg price of all the phone brands with avg rating > 70 and num_phones more than 10 among all 5g enabled phones
+
+Practice
+
+Q.24: find the top 5 batsman in IPL
+
+Q.25: find the 2nd highest 6 hitter in IPL
+
+Q.26: Find Virat Kohli's performance against all IPL teams
+
+Q.27: Find top 10 batsman with centuries in IPL
+
+Q.28: find the top 5 batsman with highest strike rate who have played a min of 1000 balls
