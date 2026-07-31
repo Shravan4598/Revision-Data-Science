@@ -1,0 +1,1 @@
+SELECT model,rating,rating/10 FROM csvtu.smartphones;
