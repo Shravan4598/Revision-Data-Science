@@ -1,0 +1,1 @@
+SELECT model, 'smartphone' AS 'type' FROM csvtu.smartphones;
