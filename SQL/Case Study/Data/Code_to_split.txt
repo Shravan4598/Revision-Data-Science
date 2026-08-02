@@ -1,0 +1,22 @@
+Sub ExportAllSheets()
+
+    Dim ws As Worksheet
+    Dim NewWB As Workbook
+    Dim SavePath As String
+
+    SavePath = ThisWorkbook.Path & "\"
+
+    For Each ws In ThisWorkbook.Worksheets
+        ws.Copy
+        Set NewWB = ActiveWorkbook
+
+        Application.DisplayAlerts = False
+        NewWB.SaveAs Filename:=SavePath & ws.Name & ".xlsx", _
+                     FileFormat:=xlOpenXMLWorkbook
+        NewWB.Close SaveChanges:=False
+        Application.DisplayAlerts = True
+    Next ws
+
+    MsgBox "All sheets exported successfully!"
+
+End Sub
