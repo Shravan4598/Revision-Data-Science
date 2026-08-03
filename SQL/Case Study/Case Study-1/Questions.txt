@@ -16,6 +16,8 @@ Q08: find the food that is being sold at most number of restaurants
 
 Q09: find restaurant with max revenue in a given month
 
+Q09.1 I WANT THE REVENUE OF ALL RESTAURANTS ON EVERY MONTH?
+
 Q10: find restaurants with sales > x
 
 Q11: find customers who have never ordered
