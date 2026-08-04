@@ -1,0 +1,7 @@
+Q01.Find the movie with highest profit(vs order by)
+
+Q02.Find how many movies have a rating > the avg of all the movie ratings(Find the count of above average movies)
+
+Q03.Find the highest rated movie of 2000
+
+Q04.Find the highest rated movie among all movies whose number of votes are > the dataset avg votes
