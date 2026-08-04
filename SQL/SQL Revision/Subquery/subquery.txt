@@ -6,3 +6,10 @@ Q02.Find how many movies have a rating > the avg of all the movie ratings(Find t
 Q03.Find the highest rated movie of 2000
 
 Q04.Find the highest rated movie among all movies whose number of votes are > the dataset avg votes
+
+
+Q01: Find all users who never ordered
+Q02: Find all the movies made by top 3 directors(in terms of total gross income)
+Q03: Find all movies of all those actors whose filmography's avg rating > 8.5(take 25000 votes as cutoff)
+
+
