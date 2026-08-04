@@ -1,0 +1,4 @@
+*****************  TABLE SUBQUERY   *********************************
+Q1. Find the most profitable movie of each year?
+Q2. Find the highest rated movie of each genre votes cutoff of 25000?
+Q3. Find the highest grossing movies of top 5 actor/director combo in terms of total gross income?
