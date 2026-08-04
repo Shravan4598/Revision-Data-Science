@@ -1,0 +1,5 @@
+
+*********************Correlated Subquery************************************
+Q1. Find all the movies that have a rating higher than the average rating of movies in the same genre.[Animation]
+
+Q2. Find the favorite food of each customer.
