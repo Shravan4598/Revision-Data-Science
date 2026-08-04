@@ -1,4 +1,4 @@
-
+*****************  SCALAR SUBQUERY   *********************************
 Q01.Find the movie with highest profit(vs order by)
 
 Q02.Find how many movies have a rating > the avg of all the movie ratings(Find the count of above average movies)
@@ -7,9 +7,15 @@ Q03.Find the highest rated movie of 2000
 
 Q04.Find the highest rated movie among all movies whose number of votes are > the dataset avg votes
 
+*****************  ROW SUBQUERY   *********************************
 
 Q01: Find all users who never ordered
 Q02: Find all the movies made by top 3 directors(in terms of total gross income)
 Q03: Find all movies of all those actors whose filmography's avg rating > 8.5(take 25000 votes as cutoff)
+
+*****************  TABLE SUBQUERY   *********************************
+Q1. Find the most profitable movie of each year?
+Q2. Find the highest rated movie of each genre votes cutoff of 25000?
+Q3. Find the highest grossing movies of top 5 actor/director combo in terms of total gross income?
 
 
