@@ -33,15 +33,14 @@ name VARCHAR(100) NOT NULL
 )
 """)
 
-# mycursor.execute(
-# """
-# INSERT INTO airport VALUES
-# (1,'DEL','New Delhi','IGIA'),
-# (2,'CCU','Kolkata','NSCA'),
-# (3,'BOM','Mumbai','CSMA')
-# """
-# )
-# conn.commit()
+mycursor.execute(
+ """
+ INSERT INTO airport VALUES
+ (1,'DEL','New Delhi','IGIA'),
+ (2,'CCU','Kolkata','NSCA'),
+ (3,'BOM','Mumbai','CSMA')
+ """)
+conn.commit()
 
 
 # Retrieve
@@ -76,3 +75,4 @@ conn.commit()
 mycursor.execute("SELECT * FROM airport")
 data=mycursor.fetchall()
 print(data)
+
