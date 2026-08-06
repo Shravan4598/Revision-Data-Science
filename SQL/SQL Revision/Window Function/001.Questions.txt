@@ -1,0 +1,12 @@
+
+
+Q001. Find all the students who have marks higher than the avg marks of their respective branch;
+Q002.Find the rank of the student based on marks from whole branch?
+QOO3.Find the rank of the student based on marks branch wise?
+Q004. Find top 2 most paying customers of each month?
+Q005. Create roll no from branch and marks?
+Q006. Find the branch toppers?
+Q007. FRAME Clause?
+Q008. Find the last guy of each branch?
+Q009. Alternate way of writing Window functions?
+Q010. Find the 2nd last guy of each branch, 5th topper of each branch?
