@@ -1,0 +1,19 @@
+
+Q1.Convert the movies name into upper and lower using string function?
+
+Q2.Display the movies name and its director with star?
+Movie_name ---> Director_name and Star_name
+
+Q3.Display the movies name and its director with star?
+ Movie_name ---> Director_name ---> Star_name
+
+Q4. Dispaly the first five characters of the movie name?
+
+Q5. Dispaly the first five last characters of the movie name?
+
+
+
+
+
+
+
