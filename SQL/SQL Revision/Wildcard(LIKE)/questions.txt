@@ -1,0 +1,10 @@
+
+Q1. Display all the movies name with 5 characters?
+
+Q2. Display all the movies name having 5 characters and starting with A?
+
+Q3. Display all the movies name having "man" in the movie name?
+
+Q4. Display all the movies name having "man" at the end of the  movie name?
+
+ Q5. Display all the movies name having "man" at the start of the  movie name?
