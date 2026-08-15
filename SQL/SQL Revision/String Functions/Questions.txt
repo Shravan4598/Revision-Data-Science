@@ -11,6 +11,49 @@ Q4. Dispaly the first five characters of the movie name?
 
 Q5. Dispaly the first five last characters of the movie name?
 
+Q6. Replace world with india in the string Hello World?
+
+Q7. Replace  man with woman in the movie name?
+
+Q8. Reverse the String or word?
+
+Q9. Check the movies name which is pallindrome ?
+
+Q10. display the length of a movie name?
+
+Q11.Insert a new string at any position of the other string(inside or anywhere in the string)?
+
+Q12.Display the first 3 characters from left and right of the movie name?
+
+Q13. Repeat the string three times ?
+
+Q14. Remove unwanted things from the string?
+Example: "    Shravan      " --> "Shravan"
+"......Shravan........" ---> "Shravan"
+
+Q15. Consider the following SQL query: SELECT 'www.campusx.com', SUBSTRING_INDEX('www.campusx.com', '.', -2);
+ What will be the exact output of the SUBSTRING_INDEX part of this query?
+A. www
+B. www.campusx
+C. campusx.
+D. com
+
+
+Q16.Compare two string?
+
+Q17. Locate the string on a another string?
+
+       OR 
+
+Q17. Tell the index or position of a string in another string?
+
+
+Q18. Pad +91 in the phone number from the left?
+
+Q19. Pad +91 in the phone number from the RIGHT?
+
+
+
 
 
 
