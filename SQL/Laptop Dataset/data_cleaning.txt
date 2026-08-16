@@ -1,0 +1,110 @@
+https://www.kaggle.com/datasets/ehtishamsadiq/uncleaned-laptop-price-dataset
+
+🧹 Laptop Data Cleaning — Easy to Remember
+1. Backup
+
+→ Create a copy of the original data.
+
+2. Inspect
+
+→ Check rows, columns, datatypes, and dataset size.
+
+3. Remove Unnecessary Data
+
+→ Remove unwanted columns and completely empty rows.
+
+4. Check Duplicates
+
+→ Find and remove duplicate records.
+
+5. Check Missing Values
+
+→ Identify NULL, ?, and other missing values.
+
+6. Clean Numerical Columns
+Inches → Decimal
+RAM → Remove GB → Integer
+Weight → Remove kg → Decimal
+Price → Round → Integer
+7. Clean Operating System
+
+→ Convert different OS names into:
+Windows / macOS / Linux / N/A / Other
+
+8. Split GPU
+
+→ GPU → GPU Brand + GPU Name
+
+9. Split CPU
+
+→ CPU → CPU Brand + Processor + CPU Speed
+
+10. Clean CPU Speed
+
+→ Remove GHz → Decimal
+
+11. Clean Screen Resolution
+
+→ Extract:
+
+Height
+Width
+Touchscreen
+12. Clean Processor
+
+→ Simplify processor names.
+
+13. Clean Memory
+
+→ Identify:
+
+SSD
+HDD
+Hybrid
+Flash Storage
+14. Split Storage
+
+→ Memory → Primary Storage + Secondary Storage
+
+15. Standardize Storage
+
+→ Remove SSD/HDD
+→ Convert TB → GB
+→ Remove GB
+→ Convert to Integer
+
+16. Remove Old Columns
+
+→ Remove columns that are no longer required.
+
+17. Final Check
+
+→ Check:
+
+Rows
+Columns
+Datatypes
+Missing values
+Duplicates
+18. Ready for EDA
+
+→ Now perform Exploratory Data Analysis.
+
+🧠 Super Easy Formula to Remember
+
+Backup → Inspect → Remove → Missing → Clean → Split → Standardize → Drop → Verify → EDA
+
+Or remember:
+
+B I R M C S S D V E
+
+B — Backup
+I — Inspect
+R — Remove unnecessary data
+M — Missing values
+C — Clean columns
+S — Split columns
+S — Standardize values
+D — Drop old columns
+V — Verify
+E — EDA
