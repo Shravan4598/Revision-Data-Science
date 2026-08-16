@@ -277,3 +277,152 @@ ALTER TABLE laptopdata MODIFY COLUMN  touch_screen INTEGER;
 ALTER TABLE laptopdata DROP COLUMN ScreenResolution;
 
 SELECT * FROM laptopdata;
+
+-- Processor
+
+SELECT Processor FROM laptopdata;
+
+SELECT SUBSTRING_INDEX(Processor," ",2) FROM laptopdata;
+
+UPDATE laptopdata SET Processor=SUBSTRING_INDEX(Processor," ",2);
+SELECT DISTINCT(Processor) FROM laptopdata;
+
+SELECT * FROM laptopdata;
+
+-- Memory
+-- 1. type ---> SSD,HDD,Hybrid
+-- 2. Primary Storage ---> 128,256,1024
+-- 3. Secondary Storage ---> 0,1024,1TB
+
+
+ALTER TABLE laptopdata 
+ADD COLUMN MemoryType VARCHAR(255) AFTER Memory,
+ADD COLUMN Primary_Storage VARCHAR(255) AFTER MemoryType,
+ADD COLUMN Secondary_Storage VARCHAR(255) AFTER Primary_Storage;
+
+
+SELECT Memory,
+CASE
+    WHEN Memory LIKE '%SSD%' AND Memory LIKE '%HDD%' THEN 'Hybrid'
+    WHEN Memory LIKE '%SSD%' THEN 'SSD'
+    WHEN Memory LIKE '%HDD%' THEN 'HDD'
+    WHEN Memory LIKE '%Flash Storage%' THEN 'Flash Storage'
+    WHEN Memory LIKE '%Hybrid%' THEN 'Hybrid'
+    WHEN Memory LIKE '%Flash Storage%' AND Memory LIKE '%HDD%' THEN 'Hybrid'
+    ELSE NULL
+END AS MemoryType
+FROM laptopdata;
+
+UPDATE laptopdata SET MemoryType=CASE
+    WHEN Memory LIKE '%SSD%' AND Memory LIKE '%HDD%' THEN 'Hybrid'
+    WHEN Memory LIKE '%SSD%' THEN 'SSD'
+    WHEN Memory LIKE '%HDD%' THEN 'HDD'
+    WHEN Memory LIKE '%Flash Storage%' THEN 'Flash Storage'
+    WHEN Memory LIKE '%Hybrid%' THEN 'Hybrid'
+    WHEN Memory LIKE '%Flash Storage%' AND Memory LIKE '%HDD%' THEN 'Hybrid'
+    ELSE NULL
+END;
+
+SELECT * FROM laptopdata;
+
+
+SELECT Memory,
+       TRIM(REPLACE(REPLACE(SUBSTRING_INDEX(Memory, '+', 1), 'SSD', ''), 'HDD', '')) AS Memory_1,
+       CASE
+           WHEN Memory LIKE '%+%' THEN
+               TRIM(REPLACE(REPLACE(SUBSTRING_INDEX(Memory, '+', -1), 'SSD', ''), 'HDD', ''))
+           ELSE 0
+       END AS Memory_2
+FROM laptopdata;
+
+UPDATE laptopdata
+SET
+    Primary_Storage = TRIM(
+        REPLACE(
+            REPLACE(SUBSTRING_INDEX(Memory, '+', 1), 'SSD', ''),
+            'HDD', ''
+        )
+    ),
+    Secondary_Storage = CASE
+        WHEN Memory LIKE '%+%' THEN
+            TRIM(
+                REPLACE(
+                    REPLACE(SUBSTRING_INDEX(Memory, '+', -1), 'SSD', ''),
+                    'HDD', ''
+                )
+            )
+        ELSE 0
+    END;
+    
+SELECT * FROM laptopdata;
+
+ALTER TABLE laptopdata
+DROP COLUMN Memory_Size,
+DROP COLUMN Memory_Type,
+DROP COLUMN Memory;
+
+-- Disable Safe Update Mode
+SET SQL_SAFE_UPDATES = 0;
+
+-- Convert TB to GB and remove the units
+SET SQL_SAFE_UPDATES = 0;
+
+UPDATE laptopdata
+SET
+    Primary_Storage = CASE
+        WHEN Primary_Storage = '?' THEN NULL
+        WHEN Primary_Storage LIKE '%TB%' THEN
+            CAST(
+                REPLACE(
+                    REPLACE(Primary_Storage, 'TB', ''),
+                    'Hybrid', ''
+                ) AS DECIMAL(10,2)
+            ) * 1024
+        WHEN Primary_Storage LIKE '%GB%' THEN
+            CAST(
+                REPLACE(
+                    REPLACE(
+                        REPLACE(Primary_Storage, 'GB', ''),
+                        'Flash Storage', ''
+                    ),
+                    'Hybrid', ''
+                ) AS DECIMAL(10,2)
+            )
+        ELSE Primary_Storage
+    END,
+
+    Secondary_Storage = CASE
+        WHEN Secondary_Storage = '0' THEN 0
+        WHEN Secondary_Storage = '?' THEN NULL
+        WHEN Secondary_Storage LIKE '%TB%' THEN
+            CAST(
+                REPLACE(
+                    REPLACE(Secondary_Storage, 'TB', ''),
+                    'Hybrid', ''
+                ) AS DECIMAL(10,2)
+            ) * 1024
+        WHEN Secondary_Storage LIKE '%GB%' THEN
+            CAST(
+                REPLACE(
+                    REPLACE(
+                        REPLACE(Secondary_Storage, 'GB', ''),
+                        'Flash Storage', ''
+                    ),
+                    'Hybrid', ''
+                ) AS DECIMAL(10,2)
+            )
+        ELSE Secondary_Storage
+    END;
+
+SET SQL_SAFE_UPDATES = 1;
+
+-- Convert columns to integer
+ALTER TABLE laptopdata
+MODIFY COLUMN Primary_Storage INT,
+MODIFY COLUMN Secondary_Storage INT;
+
+ALTER TABLE laptopdata DROP COLUMN gpu_name;
+
+SELECT * FROM laptopdata;
+
+
