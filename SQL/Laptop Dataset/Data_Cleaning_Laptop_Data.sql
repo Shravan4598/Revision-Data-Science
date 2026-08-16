@@ -244,4 +244,36 @@ SET Memory_Type= SUBSTRING_INDEX(Memory," ",-1);
 
 SELECT * FROM laptopdata;
 
+-- ScreenResolution
 
+-- Height
+-- Width
+-- TouchScreen --> Yes(1) and No(0)
+
+SELECT ScreenResolution FROM laptopdata;
+
+ALTER TABLE laptopdata 
+ADD COLUMN height VARCHAR(10) AFTER ScreenResolution,
+ADD COLUMN width VARCHAR(10) AFTER height,
+ADD COLUMN touch_screen VARCHAR(10) AFTER width;
+
+SELECT SUBSTRING_INDEX(ScreenResolution," ",-1) FROM laptopdata;
+
+SELECT SUBSTRING_INDEX(SUBSTRING_INDEX(ScreenResolution," ",-1),"x",1) FROM laptopdata;
+SELECT SUBSTRING_INDEX(SUBSTRING_INDEX(ScreenResolution," ",-1),"x",-1) FROM laptopdata;
+
+UPDATE laptopdata SET height=SUBSTRING_INDEX(SUBSTRING_INDEX(ScreenResolution," ",-1),"x",1),
+width=SUBSTRING_INDEX(SUBSTRING_INDEX(ScreenResolution," ",-1),"x",-1);
+
+ALTER TABLE laptopdata
+MODIFY COLUMN height INTEGER;
+ALTER TABLE laptopdata
+MODIFY COLUMN width INTEGER;
+
+SELECT ScreenResolution LIKE "%Touch%" FROM laptopdata;
+UPDATE laptopdata SET touch_screen=(ScreenResolution LIKE "%Touch%");
+ALTER TABLE laptopdata MODIFY COLUMN  touch_screen INTEGER;
+
+ALTER TABLE laptopdata DROP COLUMN ScreenResolution;
+
+SELECT * FROM laptopdata;
