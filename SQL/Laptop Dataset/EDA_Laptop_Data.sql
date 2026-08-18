@@ -128,3 +128,40 @@ SELECT
 -- contingency table
 FROM laptopdata
 GROUP BY Company;
+
+
+-- Bivariate Analysis
+
+-- Company Vs Price
+
+SELECT Company,Price FROM laptopdata;
+
+SELECT Company, COUNT(*),MIN(Price),
+MAX(Price),AVG(Price),STD(Price)
+FROM laptopdata GROUP BY Company;
+
+-- Feature Engineering 
+
+SELECT ppi FROM laptopdata ORDER BY ppi DESC;
+
+
+ALTER TABLE laptopdata ADD COLUMN ppi INTEGER;
+
+SET SQL_SAFE_UPDATES = 0;
+
+UPDATE laptopdata SET ppi= ROUND(SQRT(height*height + width*width)/Inches);
+
+-- One Hot Encoding
+
+SELECT DISTINCT(CPU_Brand_Name) FROM laptopdata;
+
+SELECT DISTINCT(gpu_brand) FROM laptopdata;
+
+SELECT gpu_brand,
+CASE WHEN gpu_brand="Intel" THEN 1 ELSE 0 END AS "Intel",
+CASE WHEN gpu_brand="AMD" THEN 1 ELSE 0 END AS "AMD",
+CASE WHEN gpu_brand="Nvidia" THEN 1 ELSE 0 END AS "Nvidia",
+CASE WHEN gpu_brand="ARM" THEN 1 ELSE 0 END AS "ARM"
+FROM laptopdata;
+
+
