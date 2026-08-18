@@ -1,0 +1,29 @@
+Q01. Find the month with most number of flights.
+
+Q02. Which week day has most costly flights.
+
+Q03. Find number of indigo flights every month.
+
+Q04. Find list of all flights that depart between 10AM and 2PM from Delhi to Banglore.
+
+Q05. Find the number of flights departing on weekends from Bangalore.
+
+Q06. Calculate the arrival time for all flights by adding the duration to the departure time.
+
+Q07. Calculate the arrival date for all the flights.
+
+Q08. Calculate the average duration of flights between two cities.
+
+Q09. Find all flights that arrive at their destination after midnight.
+
+Q10. Find quarter wise number of flights for each airline.
+
+Q11. Find the longest flight distance(between cities in terms of time) in India.
+
+Q12. Average time duration for flights that have 1 stop vs more than 1 stops.
+
+Q13. Find all Air India flights in a given date range originating from Delhi.
+
+Q14. Find the longest flight of each airline.
+
+Q15. Find all the pair of cities having average time duration > 3 hours.
