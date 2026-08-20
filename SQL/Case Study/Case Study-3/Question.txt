@@ -12,18 +12,24 @@ Q06. Calculate the arrival time for all flights by adding the duration to the de
 
 Q07. Calculate the arrival date for all the flights.
 
-Q08. Calculate the average duration of flights between two cities.
+Q08. Find the number of flights which travel on multiple dates.
 
-Q09. Find all flights that arrive at their destination after midnight.
+Q09. Calculate the average duration of flights between all city pairs.
 
-Q10. Find quarter wise number of flights for each airline.
+Q10. Find all flights which departed before midnight but arrived at their destination after midnight having only 1 stop.
 
-Q11. Find the longest flight distance(between cities in terms of time) in India.
+Q11. Find quarter wise number of flights for each airline
 
-Q12. Average time duration for flights that have 1 stop vs more than 1 stops.
+Q12. Find the longest flight distance(between cities in terms of time) in India
 
-Q13. Find all Air India flights in a given date range originating from Delhi.
+Q13. Average time duration for flights that have 1 stop vs more than 1 stops
 
-Q14. Find the longest flight of each airline.
+Q14. Find all Air India flights in a given date range originating from Delhi
 
-Q15. Find all the pair of cities having average time duration > 3 hours.
+Q15. Find the longest flight of each airline
+
+Q16. Find all the pair of cities having average time duration > 3 hours
+
+Q17. Make a weekday vs time grid showing frequency of flights from Bangalore and Delhi
+
+Q18. Make a weekday vs time grid showing avg flight price from Bangalore and Delhi
